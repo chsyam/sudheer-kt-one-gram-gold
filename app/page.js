@@ -98,13 +98,13 @@ export default function Home() {
 					Object.keys(latestProducts)?.map((day, index) => {
 						return (
 							<div key={index} className="mt-6">
-								<div className="font-normal border-b-2 border-[#a8a8a8] py-2 flex justify-between">
-									<p className="text-3xl">{day}</p>
+								<div className="font-normal border-b-2 border-[#a8a8a8] py-2 flex justify-between flex-wrap">
+									<p className="text-xl sm:text-2xl">{day}</p>
 									{
 										index === 0 ? (
-											<div className="flex gap-2 flex-wrap justify-end">
-												<input placeholder="type to search products" className="border-2 border-[#cbcbcb] px-[10px] py-[5px] text-md outline-none rounded-md" />
-												<input type="date" className="border-2 border-[#cbcbcb] px-[10px] py-[5px] text-md outline-none cursor-pointer rounded-md" />
+											<div className="flex gap-2 flex-wrap justify-start">
+												<input placeholder="Rose gold chain..." className="border-2 border-[#cbcbcb] px-[10px] py-[5px] text-md outline-none rounded-md w-[160px] sm:w-fit" />
+												<input type="date" defaultValue={new Date().toISOString().split('T')[0]} placeholder="Date" className="border-2 border-[#cbcbcb] px-[10px] py-[5px] text-md outline-none cursor-pointer rounded-md" />
 											</div>
 										) : (
 											""
@@ -122,7 +122,7 @@ export default function Home() {
 														<p className="text-gray-500 text-sm">{product?.tag}</p>
 													</div>
 												</div>
-												<div className="mr-4 flex justify-end gap-2 items-center">
+												<div className="mr-4 flex justify-end gap-2 items-center flex-wrap">
 													<Whatsapp height={30} width={30} />
 													<ShoppingCart className="cursor-pointer" size={30} />
 												</div>
