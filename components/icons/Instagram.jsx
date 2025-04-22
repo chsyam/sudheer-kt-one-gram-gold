@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Instagram({ height = 32, width = 32 }) {
     return (
-        <div>
+        <div onClick={() => window.open("https://www.instagram.com/sudheer_kt_one_gram_gold/", "_blank")} className="cursor-pointer">
             <svg height={height} width={width} viewBox="0 0 3364.7 3364.7" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>

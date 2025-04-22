@@ -2,7 +2,7 @@ import React from "react";
 
 export default function YouTube({ height = 32, width = 32 }) {
     return (
-        <div>
+        <div onClick={() => window.open("https://www.youtube.com/@sudheer_kt_onegram_gold8371", "_blank")} className=" cursor-pointer">
             <svg height={height} width={width} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
