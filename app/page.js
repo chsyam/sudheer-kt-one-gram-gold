@@ -115,7 +115,7 @@ export default function Home() {
 									latestProducts[day]?.map((product, ind) => {
 										return (
 											<div key={ind} className="shadow-xl hover:shadow-2xl flex items-center justify-between gap-4 my-4 bg-[#FFF] border border-[#dcdcdc] rounded-2xl">
-												<div onClick={handleYTRedirect} className="cursor-pointer grow flex justify-start items-center gap-4">
+												<div className="cursor-pointer grow flex justify-start items-center gap-4">
 													<Image src={product.image} alt={product.name} width={100} height={100} className="h-[100px] p-2 rounded-2xl" />
 													<div>
 														<p className="text-xl">{product?.name}</p>
