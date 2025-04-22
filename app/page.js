@@ -1,103 +1,112 @@
 import Image from "next/image";
+import React from "react";
+import styles from "./../styles/LatestProducts.module.css";
+import YouTube from "@/components/icons/YouTube";
+import Instagram from "@/components/icons/Instagram";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+	const latestProducts = {
+		"Today": [
+			{
+				product_id: 1,
+				name: "Product 1",
+				image: "/images/today-1.avif",
+			},
+			{
+				product_id: 2,
+				name: "Product 2",
+				image: "/images/today-2.avif",
+			},
+			{
+				product_id: 3,
+				name: "Product 3",
+				image: "/images/today-3.avif",
+			},
+			{
+				product_id: 4,
+				name: "Product 4",
+				image: "/images/today-4.avif",
+			},
+			{
+				product_id: 5,
+				name: "Product 5",
+				image: "/images/today-5.avif",
+			}
+		],
+		"21 Apr 2025": [
+			{
+				product_id: 1,
+				name: "Product 1",
+				image: "/images/today-1.avif",
+			},
+			{
+				product_id: 2,
+				name: "Product 2",
+				image: "/images/today-2.avif",
+			},
+			{
+				product_id: 3,
+				name: "Product 3",
+				image: "/images/today-3.avif",
+			},
+			{
+				product_id: 4,
+				name: "Product 4",
+				image: "/images/today-4.avif",
+			},
+			{
+				product_id: 5,
+				name: "Product 5",
+				image: "/images/today-5.avif",
+			}
+		]
+	};
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	return (
+		<div className="max-w-[1400px]">
+			<div className={styles.latestProductsContainer}>
+				<div className="flex justify-center gap-4">
+					<Image src="/images/sudheerkt-logo.png" alt={"Logo"} priority width={100} height={100} className="w-[100px] h-[100px]" />
+					<div className={styles.company_metadata}>
+						<p className="text-2xl">
+							Sudheer KT One Gram Gold
+						</p>
+						<p className="text-gray-600">
+							Best Quality products since 1985
+						</p>
+						<div className="flex justify-start gap-[10px] items-center flex-wrap mt-2">
+							<YouTube height={32} width={32} />
+							<Instagram height={24} width={24} />
+						</div>
+					</div>
+				</div>
+				{
+					Object.keys(latestProducts)?.map((day, index) => {
+						return (
+							<div key={index} className="mt-6">
+								<div className="font-normal border-b-2 border-[#a8a8a8] py-2 flex justify-between">
+									<p className="text-3xl">{day}</p>
+									<div className="flex gap-2 flex-wrap justify-end">
+										<input placeholder="type to search all products" className="border-2 border-[#cbcbcb] px-[10px] py-[5px] text-md outline-none rounded-md" />
+										<input type="date" className="border-2 border-[#cbcbcb] px-[10px] py-[5px] text-md outline-none cursor-pointer rounded-md" />
+									</div>
+								</div>
+								{
+									latestProducts[day]?.map((product, ind) => {
+										return (
+											<div key={ind} className="flex items-center justify-start gap-4 my-8 bg-[#FFF]">
+												<Image src={product.image} alt={product.name} width={100} height={100} />
+												<p className="text-xl">{product.name}</p>
+											</div>
+										);
+									})
+
+								}
+							</div>
+						);
+					})
+				}
+			</div>
+		</div>
+	);
 }

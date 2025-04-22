@@ -1,0 +1,10 @@
+.latestProductsContainer {
+    margin: 25px auto;
+    width: 70%;
+}
+
+@media (max-width:850px) {
+    .latestProductsContainer {
+        width: 90%;
+    }
+}
